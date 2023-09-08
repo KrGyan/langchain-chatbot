@@ -3,7 +3,6 @@ import utils
 import streamlit as st
 from streaming import StreamHandler
 from dotenv import load_dotenv
-
 from langchain.vectorstores import Chroma
 from langchain.document_loaders.unstructured import UnstructuredFileLoader
 from langchain.memory import ConversationBufferMemory
