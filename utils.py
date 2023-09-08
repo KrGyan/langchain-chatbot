@@ -5,7 +5,7 @@ from streamlit_extras.app_logo import add_logo
 
 
 def add_marcel_logo():
-    add_logo("MRCL_Logo_public.png", height=300)
+    add_logo("img/MRCL_Logo_public.svg", height=300)
 
 def enable_chat_history(func):
     if os.environ.get("OPENAI_API_KEY"):
