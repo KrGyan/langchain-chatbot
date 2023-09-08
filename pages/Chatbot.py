@@ -90,9 +90,9 @@ class CustomDataChatbot:
     def main(self):
 
         # User Inputs
-        uploaded_files = st.sidebar.file_uploader(label='Upload PDF files', type=['pdf'], accept_multiple_files=True)
+        uploaded_files = st.sidebar.file_uploader(label='Upload your files', accept_multiple_files=True)
         if not uploaded_files:
-            st.error("Please upload PDF documents to continue!")
+            st.error("Please upload your documents to continue!")
             st.stop()
 
         user_query = st.chat_input(placeholder="Ask me anything!")
