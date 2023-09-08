@@ -16,6 +16,18 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 st.set_page_config(page_title="ChatPDF", page_icon="📄")
 st.header('Chat with your documents')
+st.markdown(
+    """
+    <style>
+    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
+    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
+    .viewerBadge_text__1JaDK {
+        display: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.write('Has access to custom documents and can respond to user queries by referring to the content within those documents')
 add_marcel_logo()
 class CustomDataChatbot:
