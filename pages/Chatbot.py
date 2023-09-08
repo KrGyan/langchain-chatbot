@@ -28,7 +28,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.write('Has access to custom documents and can respond to user queries by referring to the content within those documents')
+st.write('Has access to your uploaded documents and can respond to your queries by referring to the content within those documents')
 add_marcel_logo()
 class CustomDataChatbot:
 
