@@ -21,6 +21,7 @@ class CustomDataChatbot:
 
     def __init__(self):
         load_dotenv()
+        os.environ["OPENAI_API_KEY"] = "5d3c3a3ed2464f508ae0a25111a1598f"
         #utils.configure_openai_api_key()
         self.openai_model = "gpt-35-turbo"
 
