@@ -2,6 +2,12 @@ import os
 import streamlit as st
 
 #decorator
+
+
+def add_logo():
+    from streamlit_extras.app_logo import add_logo
+    add_logo("img/MRCL_Logo_public.svg", height=300)
+
 def enable_chat_history(func):
     if os.environ.get("OPENAI_API_KEY"):
 

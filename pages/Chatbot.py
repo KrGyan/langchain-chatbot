@@ -16,6 +16,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 st.set_page_config(page_title="ChatPDF", page_icon="📄")
 st.header('Chat with your documents')
 st.write('Has access to custom documents and can respond to user queries by referring to the content within those documents')
+@utils.add_logo
 class CustomDataChatbot:
 
     def __init__(self):
