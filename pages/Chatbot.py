@@ -5,7 +5,6 @@ import os
 import utils
 import streamlit as st
 from streaming import StreamHandler
-from dotenv import load_dotenv
 from langchain.vectorstores import Chroma
 from langchain.document_loaders.unstructured import UnstructuredFileLoader
 from langchain.memory import ConversationBufferMemory
@@ -20,11 +19,11 @@ st.write('Has access to custom documents and can respond to user queries by refe
 class CustomDataChatbot:
 
     def __init__(self):
-        load_dotenv()
-        os.environ["OPENAI_API_TYPE"] = "azure"
-        os.environ["OPENAI_API_BASE"] = "https://marceldevai.openai.azure.com"
-        os.environ["OPENAI_API_KEY"] = "5d3c3a3ed2464f508ae0a25111a1598f "
-        os.environ["OPENAI_API_VERSION"] = "2023-03-15-preview"
+      
+        os.environ["OPENAI_API_TYPE"] = st.secrets["OPENAI_API_TYPE"]
+        os.environ["OPENAI_API_BASE"] = st.secrets["OPENAI_API_BASE"]
+        os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+        os.environ["OPENAI_API_VERSION"] = st.secrets["OPENAI_API_VERSION"]
         #utils.configure_openai_api_key()
         self.openai_model = "gpt-35-turbo"
 
