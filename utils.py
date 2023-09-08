@@ -4,7 +4,7 @@ from streamlit_extras.app_logo import add_logo
 #decorator
 
 
-def add_logo():
+def add_marcel_logo():
     add_logo("img/MRCL_Logo_public.svg", height=300)
 
 def enable_chat_history(func):

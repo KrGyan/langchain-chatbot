@@ -3,7 +3,7 @@ import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 import os
 import utils
-from utils import add_logo
+from utils import add_marcel_logo
 import streamlit as st
 from streaming import StreamHandler
 from langchain.vectorstores import Chroma
@@ -17,7 +17,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 st.set_page_config(page_title="ChatPDF", page_icon="📄")
 st.header('Chat with your documents')
 st.write('Has access to custom documents and can respond to user queries by referring to the content within those documents')
-add_logo()
+add_marcel_logo()
 class CustomDataChatbot:
 
     def __init__(self):
