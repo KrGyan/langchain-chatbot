@@ -6,6 +6,6 @@ st.set_page_config(
     layout='wide'
 )
 
-st.header("Marcel Chat over Documents")
+st.header("Marcel Chat over Documents..")
 
 @utils.add_logo
