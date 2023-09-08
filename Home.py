@@ -1,11 +1,9 @@
 import streamlit as st
-import utils
+from utils import add_logo
 st.set_page_config(
-    page_title="Langchain Chatbot",
+    page_title="Marcel Chatbot",
     page_icon='💬',
     layout='wide'
 )
-
+add_logo()
 st.header("Marcel Chat over Documents..")
-
-@utils.add_logo
