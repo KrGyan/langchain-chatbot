@@ -9,3 +9,4 @@ duckdb==0.8.1
 unstructured==0.7.12
 chromadb==0.4.9
 tiktoken==0.4.0
+pysqlite3-binary==0.5.1
