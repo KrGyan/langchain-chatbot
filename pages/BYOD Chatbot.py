@@ -8,6 +8,9 @@ import streamlit as st
 from streaming import StreamHandler
 from langchain.vectorstores import Chroma
 from langchain.document_loaders.unstructured import UnstructuredFileLoader
+from langchain.document_loaders import UnstructuredWordDocumentLoader
+from langchain.document_loaders import UnstructuredPowerPointLoader
+from langchain.document_loaders import UnstructuredCSVLoader
 from langchain.memory import ConversationBufferMemory
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.chains import ConversationalRetrievalChain
@@ -57,7 +60,17 @@ class CustomDataChatbot:
         docs = []
         for file in uploaded_files:
             file_path = self.save_file(file)
-            loader = UnstructuredFileLoader(file_path)
+            file_extension = os.path.splitext(file_path)
+            match file_extension:
+                case 'ppt':
+                    loader = UnstructuredPowerPointLoader(file_path)
+                case 'csv' :
+                    loader = UnstructuredCSVLoader(file_path)
+                case 'docx' :
+                    loader = UnstructuredWordDocumentLoader(file_path)
+                case _:
+                    loader = UnstructuredFileLoader(file_path)
+                    
             docs.extend(loader.load())
         
         # Split documents
