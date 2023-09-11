@@ -66,7 +66,7 @@ class CustomDataChatbot:
                 loader = UnstructuredCSVLoader(file_path)
             elif file_extension == 'ppt':
                 loader = UnstructuredPowerPointLoader(file_path)
-            elif file_extension = 'docx':
+            elif file_extension == 'docx':
                 loader = UnstructuredWordDocumentLoader(file_path)
             else :
                 loader = UnstructuredFileLoader(file_path)
