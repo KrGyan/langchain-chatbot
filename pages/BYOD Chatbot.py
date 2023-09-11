@@ -62,16 +62,15 @@ class CustomDataChatbot:
         for file in uploaded_files:
             file_path = self.save_file(file)
             file_extension = os.path.splitext(file_path)
-          #  match file_extension:
-           #     case 'ppt':
-            #        loader = UnstructuredPowerPointLoader(file_path)
-             #   case 'csv' :
-             #       loader = UnstructuredCSVLoader(file_path)
-             #   case 'docx' :
-             #       loader = UnstructuredWordDocumentLoader(file_path)
-              #  case _:
-            loader = UnstructuredFileLoader(file_path)
-                
+            if file_extension == 'csv':
+                loader = UnstructuredCSVLoader(file_path)
+            elif file_extension == 'ppt':
+                loader = UnstructuredPowerPointLoader(file_path)
+            elif file_extension = 'docx':
+                loader = UnstructuredWordDocumentLoader(file_path)
+            else :
+                loader = UnstructuredFileLoader(file_path)
+          
             docs.extend(loader.load())
         
         # Split documents
