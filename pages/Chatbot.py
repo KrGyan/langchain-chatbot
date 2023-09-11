@@ -68,7 +68,7 @@ class CustomDataChatbot:
         splits = text_splitter.split_documents(docs)
 
         # Create embeddings and store in vectordb
-        embeddings = OpenAIEmbeddings()
+        embeddings = OpenAIEmbeddings(chunk_size=1)
        # vectordb = DocArrayInMemorySearch.from_documents(splits, embeddings)
         vectordb = Chroma.from_documents(splits, embeddings)
 
