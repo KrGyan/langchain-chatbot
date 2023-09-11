@@ -70,8 +70,8 @@ class CustomDataChatbot:
                     loader = UnstructuredWordDocumentLoader(file_path)
                 case _:
                     loader = UnstructuredFileLoader(file_path)
-                    
-            docs.extend(loader.load())
+
+        docs.extend(loader.load())
         
         # Split documents
         text_splitter = RecursiveCharacterTextSplitter(
