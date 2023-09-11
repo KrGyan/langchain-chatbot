@@ -42,6 +42,7 @@ class CustomDataChatbot:
         os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
         os.environ["OPENAI_API_VERSION"] = st.secrets["OPENAI_API_VERSION"]
         #utils.configure_openai_api_key()
+        print(sys.version)
         self.openai_model = "gpt-35-turbo"
 
     def save_file(self, file):
